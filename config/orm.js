@@ -6,9 +6,6 @@ var connection = require("../config/connection.js");
 
 
 // Helper function for SQL syntax.
-// Let's say we want to pass 3 values into the mySQL query.
-// In order to write the query, we need 3 question marks.
-// The below helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
 // ["?", "?", "?"].toString() => "?,?,?";
 function printQuestionMarks(num) {
   var arr = [];
@@ -43,7 +40,7 @@ function objToSql(ob) {
   return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Object for SQL statement functions
 var orm = {
 	selectAll: function(tableInput, callback) {
 		var queryString = "SELECT * FROM " + tableInput + ";";
@@ -73,7 +70,7 @@ var orm = {
 			callback(result);
 		});
 	},
-	 // An example of objColVals would be {burger_name: big mac, devoured: true}
+	 // EX objColVals would be {burger_name: big mac, devoured: true}
 	updateOne: function(table, objColVals, condition, callback) {
 		var queryString = "UPDATE " + table;
 

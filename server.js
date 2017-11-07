@@ -37,15 +37,4 @@ app.get("/", function(req, res) {
 
 app.use("/api/burgers", burgersController);
 
-
-
-
-
-
-
-
-
 app.listen(port);
-
-
-

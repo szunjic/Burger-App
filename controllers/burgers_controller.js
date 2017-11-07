@@ -5,8 +5,6 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 // Create the router for the app
-	// Set up logic within those routes where required
-
 router.post("/", function(req, res) {
 	burger.insertOne([
 		"burger_name", "devoured"
